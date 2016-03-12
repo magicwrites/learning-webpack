@@ -14,6 +14,14 @@ module.exports = {
             query: {
                 presets: ['es2015']
             }
+        }, {
+            test: /\.scss/,
+            loaders: ['style', 'css', 'sass'],
+            include: path.resolve(__dirname, 'source')
+        }, {
+            test: /\.html/,
+            loader: 'html',
+            include: path.resolve(__dirname, 'source')
         }]
     }
 };

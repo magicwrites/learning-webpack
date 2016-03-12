@@ -1,3 +1,5 @@
-import $ from 'jquery';
+import Button from './components/button/button';
 
-$('body').html('Hello world');
+const button = new Button('google.com');
+
+button.render('a');
