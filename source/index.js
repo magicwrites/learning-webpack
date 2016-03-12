@@ -1,3 +1,3 @@
 import $ from 'jquery';
 
-$('body').html('Hello');
+$('body').html('Hello world');

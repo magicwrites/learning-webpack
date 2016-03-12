@@ -1,5 +1,7 @@
+var path = require('path');
+
 module.exports = {
-    entry:  './source',
+    entry: './source',
     output: {
         path: 'builds',
         filename: 'bundle.js',
@@ -8,7 +10,7 @@ module.exports = {
         loaders: [{
             test: /\.jsx?$/,
             loader: 'babel',
-            include: __dirname + '/source',
+            include: path.resolve(__dirname, 'source'),
             query: {
                 presets: ['es2015']
             }

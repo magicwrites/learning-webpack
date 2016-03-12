@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prestart": "./node_modules/.bin/webpack",
-    "start": "http-server"
+    "start-build": "./node_modules/.bin/webpack",
+    "start-webpack": "start bash -c \"./node_modules/.bin/webpack --watch\"",
+    "start-server": "start bash -c \"./node_modules/.bin/live-server --entry-file=index.html --host=localhost\"",
+    "start": "npm run-script start-webpack && npm run-script start-server"
   },
   "author": "Maciej Mazur",
   "license": "none",
